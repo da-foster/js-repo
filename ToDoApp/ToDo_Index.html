@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+Author: Darren Foster
+Filename: ToDo_Index.html
+-->
+<html>
+    <head>
+        <title>Darren Foster - ToDo App</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="ToDo_CSS.css" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Create a To-Do List!</h1>
+        <form>
+            <fieldset id="input-section">
+                <!--Date-->
+                <label for="date-input">Date: </label> 
+                <input type="date" id="date-input" min="2020-09-15" max="3020-09-15">
+                <!--Time-->
+                <label for="time-input">Time: </label> 
+                <input type="time" id="time-input">
+                <!--To-Do Input-->
+                <label for="to-do-input">Enter a to-do item: </label> 
+                <input type="text" id="to-do-input">
+                <!--Submit / Clear buttons / Delete buttons-->
+                <button type="button" id="add-todo-button">Add Item</button> 
+                <button type="button" id="clear-list-button">Clear List</button>
+                <button type="button" id="delete-items" onclick="deleteToDo()">Delete Completed items</button>
+            </fieldset>
+            <!--Error Message Section-->
+            <div id="error-section"></div>
+            <aside class="user-info">
+                <ul>
+                    <li>Check an item to mark it complete</li>
+                    <li>Drag & drop items to reorder them</li>
+                    <li>Double click items to edit</li>
+                </ul>
+            </aside>
+            <!--To-Do List-->
+            <div>
+                <label for="todo-list" id="todo-list-label"><u>List of items:</u></label>
+                <ul id="todo-list"></ul>
+            </div>
+        </form>
+        <script src="ToDo_JS.js" type="text/javascript"></script>
+    </body>
+</html>
