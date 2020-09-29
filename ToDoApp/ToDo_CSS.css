@@ -1,0 +1,69 @@
+/*
+ * Author: Darren Foster
+ * Filename: ToDo_CSS.css
+ */
+
+h1 {
+    font-size: 25px;
+    color: whitesmoke;
+}
+
+label {
+    color: whitesmoke;
+}
+
+body {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    /*font-family: 'Cambria', sans-serif;*/
+    background-image: url("retro.png");
+    font-size: 18px;
+}
+
+label {
+    color: whitesmoke;
+}
+
+.toDoItem {
+    margin: 5px 300px 0px 300px;
+    padding: 8px;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    cursor: move;
+    border-radius: 8px;
+    list-style-type: none;
+}
+
+#error-section {
+    color: red;
+    padding: 5px;
+}
+
+.completed {
+    margin-right: 15px;
+}
+
+button {
+    font-family: 'Press Start 2P', cursive;
+    border-radius: 7px;
+    padding: 3px;
+}
+
+aside {
+   font-size: 16px; 
+}
+
+.user-info ul li{
+    list-style-type: none;
+    color: whitesmoke;
+    padding-bottom: 5px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: whitesmoke;
+    text-align: center; 
+}
