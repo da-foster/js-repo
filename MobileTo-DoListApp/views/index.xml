@@ -1,0 +1,31 @@
+<Alloy>
+  <Collection src="lists"/>
+  <Window class="container" title="To Do Lists">
+    <View layout="vertical">
+      <View layout="horizontal" height="Ti.UI.SIZE">
+        <TextField id="searchField" hintText="Search for an item..." width="80%" returnKeyType="DONE" onReturn="search" />
+        <Button id="searchButton" width="18%" onClick="search" backgroundColor='#037ffc' borderRadius='5'>Search</Button>
+      </View>
+      <TableView dataCollection="lists" id="tableview">
+        <TableViewRow id="row" height="Ti.UI.SIZE">
+          <View id="view" height="Ti.UI.SIZE" layout="horizontal" width="100%">
+            <Label class="row" text="{name} " left="10px" width="93%" onDblclick="showList" list_id="{id}" alloy_id="{alloy_id}"/>
+            <Label class="row" right="1px" onClick="confirmDelete" alloy_id="{alloy_id}">X</Label>
+          </View>
+        </TableViewRow>
+      </TableView>
+    </View>
+    <View id='bottomView' layout="horizontal" width='100%' height="50dp" bottom='5%'>
+    	<Button id="insertItemButton" onClick="createNewList" width="50%" left="25%" backgroundColor='#037ffc' borderRadius='5'>New List</Button>
+    </View>
+    <AlertDialog id="alertDialog" title="Enter List Name">
+    	<ButtonNames>
+        	<ButtonName>OK</ButtonName>
+        	<ButtonName>Cancel</ButtonName>
+      	</ButtonNames>
+      	<View layout="horizontal" height="Ti.UI.SIZE">
+        	<TextField id="listName" width="96%" left="2%" hintText="Add To-do list..."/>
+      	</View>
+    </AlertDialog>
+  </Window>
+</Alloy>
