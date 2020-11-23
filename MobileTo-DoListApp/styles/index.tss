@@ -1,0 +1,22 @@
+".container": {
+  backgroundColor: "black"
+}
+
+"TextField": {
+	font: {
+    fontSize: '25'
+  }
+}
+
+"TableViewRow": {
+  font: {
+    fontSize: '30'
+  },
+  height: Ti.UI.SIZE
+}
+
+".row": {
+	font: {
+    fontSize: '28'
+  }
+}
