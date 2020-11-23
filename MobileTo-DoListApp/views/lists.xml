@@ -1,0 +1,34 @@
+<Alloy>
+  <Collection src="items"/>
+  <Window class="container" id='win' title="To Do List">
+    <View layout="vertical">
+      <View layout="horizontal" height="Ti.UI.SIZE">
+        <TextField id="itemInput" hintText="To do item..." width="79%" returnKeyType="DONE" onReturn="addItem" />
+        <Button id="insertItemButton" width="20%" onClick="addItem" backgroundColor='#037ffc' borderRadius='5'>Add</Button>
+      </View>
+      <TableView dataCollection="items" id="tableView" onClick='markComplete'>
+        <TableViewRow id="row" height="Ti.UI.SIZE">
+          <View id="view" height="Ti.UI.SIZE" layout="horizontal" width="100%">
+            <Label class="row" text="{item} " left="10px" width="93%" onClick="addItem" alloy_id="{alloy_id}" />
+            <Label class="row" right="1px" onClick="removeRow" alloy_id="{alloy_id}">X</Label>
+          </View>
+        </TableViewRow>
+      </TableView>
+    </View>
+    <View id='bottomView' layout="horizontal" backgroundColor="#037ffc" width='100%' height='50dp' bottom='0'>
+    	<TextField id="nameChange" hintText="Change list title here" width="75%" returnKeyType="DONE" onReturn="changeTitle"/>
+    	<Button id="insertItemButton" onClick="changeTitle" width="25%" borderRadius='5'>Confirm</Button>
+    </View>
+    
+    <AlertDialog id="itemUpdate" title="Update the To-Do Item">
+    	<ButtonNames>
+        	<ButtonName>OK</ButtonName>
+        	<ButtonName>Cancel</ButtonName>
+      	</ButtonNames>
+      	<View layout="horizontal" height="Ti.UI.SIZE">
+        	<TextField id="itemName" width="96%" left="2%" hintText="..."/>
+      	</View>
+    </AlertDialog>
+    
+  </Window>
+</Alloy>
