@@ -1,0 +1,11 @@
+"#item": {
+	font: {
+    	fontSize: '25'
+  	}
+}
+
+"#name": {
+	font: {
+    	fontSize: '25'
+  	}
+}
