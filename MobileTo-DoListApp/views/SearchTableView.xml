@@ -1,0 +1,8 @@
+<Alloy>
+	<TableViewRow id="searchRow" height="Ti.UI.SIZE">
+		<View id="view" height="Ti.UI.SIZE" layout="horizontal" width="100%">
+			<Label id="name" left="10px" width="30%"/>
+      		<Label id="item" width="65%" />
+    	</View>
+  	</TableViewRow>
+</Alloy>
